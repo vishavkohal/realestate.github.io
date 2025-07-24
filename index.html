@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godrej The Aqua Retreat | Premium 1, 2 & 3 BHK Homes in Hinjewadi, Pune</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #3b260d 0%, #000000 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><path fill="%23ffffff" fill-opacity="0.1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,128C672,149,768,171,864,165.3C960,160,1056,128,1152,112C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+            animation: wave 20s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-1000px); }
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .price-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: #f9c922;
+            color: black;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-video {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: rgb(59 38 13 / var(--tw-bg-opacity, 1));
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: rgb(234 179 8 / var(--tw-border-opacity, 1));
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #dddddd;
+            line-height: 1.6;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #1a1d29 0%, #3b260d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .info-card h4 {
+            font-size: 1.3rem;
+            color:#eab308;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Location Section */
+        .location {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .location-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .location-features li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: #ffffff;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .location-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffdd00;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .map-placeholder {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: #eab308;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #333;
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+
+            .price-highlight {
+                font-size: 1.4rem;
+                padding: 15px 25px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .location-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Godrej Aqua Retreat</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="text-3xl font-semibold text-yellow-500 inline-block px-4 py-1 mb-8">Godrej The Aqua Retreat</h1>
+            <p class="subtitle">at Godrej Park World, Hinjewadi Phase 1, Pune</p>
+            <h2 class="tagline">ULTRA LUXURY 1, 2 & 3 BHK HOMES</h2>
+            
+            <div class="price-highlight">
+                <i class="fas fa-home"></i> Price Starting at ₹70 Lakhs*
+            </div>
+
+            <p style="font-size: 1.2rem; margin: 20px 0; opacity: 0.9;">
+                EOI Discount Offer | Early Bird Offer | Relaxed Payment Plan
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary animate-bounce">
+                    <i class="fas fa-download"></i> Download Brochure
+                </a>
+                <a href="tel:+919899199170" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container bg-[#f6f0dd] ">
+        <div class="flex items-center justify-center py-10">
+            <h2 class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Project Highlights</h2>
+        </div>
+            <div class="info-cards">
+            <div class="info-card">
+                <h4>Project Area</h4>
+                <p>100 Acres
+                30+ Storyed</p>
+            </div>
+            <div class="info-card">
+                <h4>More Space</h4>
+                <p>Spacious Decks</p>
+            </div>
+            <div class="info-card">
+                <h4>Vast Green Area</h4>
+                <p>Green Cover 600+ Trees</p>
+            </div>
+            <div class="info-card">
+                <h4>Vastu Consulted</h4>
+                <p>All Vastu Units</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <section>
+        <br>
+        <div class="container-video">
+            <div class="video">
+            <video width="720" height="540" controls>
+                <source src="assets\videos\aqua.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+            </section>
+
+            <section class="bg-gradient-to-r from-[#3b260d] to-[#0B0C26] text-white py-12 px-4" id="features">
+                <div class="max-w-6xl mx-auto text-center">
+                  
+                  <!-- Title -->
+                  <h2 class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">
+                    Godrej Aquaman Hinjewadi Phase 1
+                  </h2>
+                  <p class="text-sm md:text-base text-gray-300 mb-8">
+                    The Iconic Life — Residences Launching Soon
+                  </p>
+              
+                  <!-- Hero Image -->
+                  <div class="flex justify-center mb-10">
+                    <img src="assets\images\header.jpg" alt="Aqua Resort Launching Soon" class="rounded-xl shadow-lg max-w-full md:w-1/2" />
+                  </div>
+              
+                  <!-- Project Highlights -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-[#fdf6e9] to-[#fdf6e9] p-6 rounded-xl shadow">
+                      <h4 class="text-xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Close to 350+ MNCs</h4>
+                      <p class="text-lg font-semibold text-black">Surrounded by top schools, hospitals & malls</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#fdf6e9] to-[#fdf6e9] p-6 rounded-xl shadow">
+                      <h4 class="text-xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">100 Acre Integrated Township</h4>
+                      <p class="text-lg font-semibold text-black">With school, healthcare, office spaces & 12 Acres of Central Greens</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#fdf6e9] to-[#fdf6e9] p-6 rounded-xl shadow">
+                      <h4 class="text-xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">No Stamp Duty & EOI Offers</h4>
+                      <p class="text-lg font-semibold text-black">Registration Charges waived on selected units</p>
+                    </div>
+                  </div>
+                  <div class="cta-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Could%20you%20share%20the%20Stamp%20Duty%2C%20On%20spot%20booking%20offers%20and%20payment%20plans%20for%20Godrej%20The%20Aqua%20Retreat." class="btn btn-primary animate-bounce">
+                        <i class="fas fa-download"></i> Get Exclusive Offer
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%20cost%20sheet%20and%20brochure%20for%20Godrej%20The%20Aqua%20Retreat?%20I%20want%20to%20understand%20the%20pricing%20better." class="btn btn-primary animate-bounce">
+                        <i class="fas fa-download"></i> Get Cost Sheet
+                    </a>
+                </div>
+                </div>
+              </section>
+      
+  <div class="container">
+    <!-- Hero Image -->
+     <br>
+    <div class="flex justify-center mb-10 bg-[#f6f0dd] ">
+        <img src="assets\images\collage.png" alt="Aqua Resort Launching Soon" class="rounded-xl shadow-lg max-w-full md:w-1/2" />
+      </div>
+  </div>
+  <section class="bg-[#3b260d] text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+  
+      <!-- Section Heading -->
+      <h2 class="text-3xl font-bold mb-4 text-white">PROJECT CONFIGURATION</h2>
+      <div class="text-xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">THE ICONIC LIFE</div>
+  
+      <!-- Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  
+        <!-- Card 1 -->
+        <div class="bg-[#fdf6e9] rounded-lg shadow-lg p-4 text-black">
+          <img src="assets\images\1-bed.jpg" alt="1 BHK Floorplan" class="w-full h-40 object-cover rounded-md mb-4 border-2 border-yellow-500">
+          <h3 class="text-lg font-bold">1 BED <span class="text-sm font-medium">(560 Sqft)</span></h3>
+          <p class="text-yellow-600 font-semibold mt-2">STARTING<br>70 – 75 Lakhs*</p>
+          <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%201%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20The%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
+            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+          </a>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="bg-[#fdf6e9] rounded-lg shadow-lg p-4 text-black">
+          <img src="assets\images\2-bed.png" alt="2 BHK Floorplan" class="w-full h-40 object-cover rounded-md mb-4 border-2 border-yellow-500">
+          <h3 class="text-lg font-bold">2 BED <span class="text-sm font-medium">(860 - 900 Sqft)</span></h3>
+          <p class="text-yellow-600 font-semibold mt-2">STARTING<br>1.09 Cr*</p>
+          <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%202%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20the%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
+            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+          </a>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="bg-[#fdf6e9] rounded-lg shadow-lg p-4 text-black">
+          <img src="assets\images\3-bed.jpg" alt="3 BHK Floorplan" class="w-full h-40 object-cover rounded-md mb-4 border-2 border-yellow-500">
+          <h3 class="text-lg font-bold">3 BED <span class="text-sm font-medium">(1060 - 1100 Sqft)</span></h3>
+          <p class="text-yellow-600 font-semibold mt-2">STARTING<br>1.39 Cr*</p>
+          <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%203%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20The%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
+            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#f6f0dd] py-10 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+      
+      <!-- Heading -->
+      <div class="mb-2">
+        <h2 class="text-sm font-semibold text-yellow-700 tracking-wider uppercase">
+          360 Video Tour
+        </h2>
+        <div class="w-24 h-0.5 bg-yellow-700 mx-auto mt-1"></div>
+      </div>
+  
+      <!-- Icon -->
+      <div class="my-4">
+        <img src="/assets/images/Image-14-09-24-at-7-Photoroom-3-e1726281796703-300x213.png" alt="Video Tour Icon" class="h-20 w-auto" />
+      </div>
+  
+      <!-- Image -->
+      <div class="mt-4">
+        <img src="/assets/images/1748521978_0_propertyImage-1024x614.webp" alt="Video Tour Main Image" class="rounded-md shadow-lg max-w-full" />
+      </div>
+      <div class="cta-buttons">
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20I%E2%80%99d%20like%20to%20see%20the%20360%C2%B0%20video%20tour%20of%20Godrej%20The%20Aqua%20Retreat.%20Could%20you%20please%20share%20it%3F" class="btn btn-primary animate-bounce">
+            <i class="fas fa-download"></i> Click For Virtual Tour
+        </a>
+        </div>
+    </div>
+  </section>
+  
+  <section class="bg-[#3b260d] text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Title -->
+       <div class="flex items-center justify-center">
+      <h2 class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Floor Plan</h2>
+  </div>
+      <!-- 3 Image Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Please%20press%20%22SEND%22%20button%20to%20instantly%20receive%20360%20%26%20Sample%20Flat%20Video%2C%20Brochure%2C%20COST%20SHEET%20and%20Floor%20Plan%20for%20Godrej%20The%20Aqua%20Retreat." target="_blank" class="block overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+          <img src="assets\images\3-BHK-2.jpg" alt="3 BHK Floor Plan" class="w-full h-full object-cover rounded-xl">
+        </a>
+  
+        <!-- Card 2 -->
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Please%20press%20%22SEND%22%20button%20to%20instantly%20receive%20360%20%26%20Sample%20Flat%20Video%2C%20Brochure%2C%20COST%20SHEET%20and%20Floor%20Plan%20for%20Godrej%20The%20Aqua%20Retreat." target="_blank" class="block overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+          <img src="assets\images\2-BHK.jpg" alt="2 BHK Floor Plan" class="w-full h-full object-cover rounded-xl">
+        </a>
+  
+        <!-- Card 3 -->
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Please%20press%20%22SEND%22%20button%20to%20instantly%20receive%20360%20%26%20Sample%20Flat%20Video%2C%20Brochure%2C%20COST%20SHEET%20and%20Floor%20Plan%20for%20Godrej%20The%20Aqua%20Retreat." target="_blank" class="block overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+          <img src="assets\images\3-BHK-2-1-e1726302546117.jpg" alt="3 BHK Alternate Floor Plan" class="w-full h-full object-cover rounded-xl">
+        </a>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="bg-[#3f2200] py-10 px-4 text-white">
+    <div class="max-w-5xl mx-auto flex flex-col items-center text-center space-y-6">
+      
+      <!-- Heading -->
+      <h2 class="text-lg font-bold uppercase tracking-wider text-yellow-400">
+        Get Sample Flat Walk Through
+      </h2>
+  
+      <!-- Tab Buttons -->
+      <div class="flex space-x-4">
+        <button class="border-2 border-yellow-400 px-4 py-1 text-sm uppercase hover:bg-yellow-400 hover:text-black transition">
+          Interior
+        </button>
+        <button class="border-2 border-yellow-400 px-4 py-1 text-sm uppercase hover:bg-yellow-400 hover:text-black transition">
+          Exterior
+        </button>
+      </div>
+  
+      <!-- Sample Flat Image -->
+      <div>
+        <img src="/assets/images/interior.jpg" alt="Sample Flat" class="rounded-md shadow-lg max-w-full" />
+      </div>
+  
+      <!-- View Virtually Button -->
+      <div class="cta-buttons">
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Please%20press%20%22SEND%22%20button%20to%20instantly%20receive%20360%20%26%20Sample%20Flat%20Video%2C%20Brochure%2C%20COST%20SHEET%20and%20Floor%20Plan%20for%20Godrej%20The%20Aqua%20Retreat." class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded shadow hover:bg-yellow-300 transition">
+            <i class="fas fa-download"></i> View Virtually
+        </a>
+      </div>
+  
+      <!-- Info Boxes -->
+      <div class="grid md:grid-cols-3 gap-4 w-full text-left">
+        <div class="border-2 border-yellow-400 p-4 text-sm">
+          <strong>Total Land Area:</strong> 8.6 Acres,<br />
+          Grand Two 32,000 sq.ft Clubhouse
+        </div>
+        <div class="border-2 border-yellow-400 p-4 text-sm">
+          <strong>Number of Livable Floors:</strong> 37,<br />
+          High-end vehicle-free Retail Street
+        </div>
+        <div class="border-2 border-yellow-400 p-4 text-sm">
+          <strong>Vastu-compliant entrance</strong>
+        </div>
+      </div>
+  
+      <!-- Cost Breakup Button -->
+      <div class="cta-buttons">
+        <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%20cost%20breakup%20and%20brochure%20for%20Godrej%20The%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." class="btn btn-primary animate-bounce">
+            <i class="fas fa-download"></i> Cost Breakup
+        </a>
+        </div>
+  
+    </div>
+  </section>
+  
+    <!-- Features Section -->
+    <section class="bg-[#f6f0dd] py-10 px-4" >
+        <div class="container">
+            <div class="flex items-center justify-center">
+                <h2 class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Why Choose Aqua Retreat?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Premium Architecture</h3>
+                    <p>7 towers with G+37 floors offering spacious and well-planned apartments with modern layouts and functional spaces designed for comfort.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Water-Inspired Living</h3>
+                    <p>Unique aqua-themed design concept that brings tranquility and serenity to your everyday living experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Prime Location</h3>
+                    <p>Located in Hinjewadi Phase 1, Pune's premier IT corridor with excellent connectivity to major tech parks and commercial hubs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>RERA Approved</h3>
+                    <p>Government registered project with RERA number PM1260002500070, ensuring transparency and legal compliance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Godrej Trust</h3>
+                    <p>Backed by the renowned Godrej Properties with decades of experience in delivering quality residential projects.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Varied Options</h3>
+                    <p>Choose from 1 BHK, 2 BHK, and 3 BHK premium apartments designed to suit different family sizes and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="bg-[#3f2200] py-10 px-4 text-white" id="location">
+        <div class="container">
+            <div class="flex items-center justify-center">
+            <h2 class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Strategic Location</h2>
+            </div>
+            <div class="location-content">
+                <div class="location-text">
+                    <h3>Hinjewadi Phase 1, Pune</h3>
+                    <p>Located at the heart of Downtown Hinjewadi Pune for seamless connectivity, these beautifully designed residences come equipped with world-class amenities to offer you the highest standard of living.</p>
+                    
+                    <ul class="location-features">
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">Pune International Airport - 17 KM</li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">PCMC Metro Station - 9 KM </li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">Excellent connectivity to Pune city center</li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8" >Bliss International School - 1 KM</li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">Proximity to shopping malls and restaurants</li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">Well-connected public transportation</li>
+                        <li class="text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-5 py-1 mb-8">EFC Office Space Business Center-1KM</li>
+                    </ul>
+                </div>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Interactive Map</h4>
+                    <p>Thakar Chowk Maan Rd, near Hinjewadi Rajiv Gandhi Infotech Park, Phase 1, Hinjawadi, Pune, Maharashtra 411057</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-[#2e1b05] py-12 px-6 text-white" id="contact">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center justify-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#f9c922] border border-[#f9c922] px-6 py-2 inline-block mb-10 uppercase">Get In Touch</h2>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold text-[#f9c922] mb-6">Contact Information</h3>
+                    <div class="space-y-6 text-sm md:text-base">
+                        <div class="flex gap-4 items-start">
+                            <i class="fas fa-phone text-[#f9c922] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Phone:</strong><br>
+                                +91 98991 99170
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i class="fas fa-envelope text-[#f9c922] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Email:</strong><br>
+                                info@godrejaquaretreat.com
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i class="fas fa-map-marker-alt text-[#f9c922] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Address:</strong><br>
+                                Hinjewadi Phase 1, Pune, Maharashtra 411057
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i class="fas fa-clock text-[#f9c922] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Office Hours:</strong><br>
+                                Mon - Sun: 9:00 AM - 8:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-xl font-semibold text-[#f9c922] mb-6">Book Your Site Visit</h3>
+                    <form class="space-y-5">
+                        <div>
+                            <input type="text" placeholder="Your Name" required class="w-full px-4 py-2 bg-transparent border border-[#f9c922] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f9c922]">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" required class="w-full px-4 py-2 bg-transparent border border-[#f9c922] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f9c922]">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Your Phone Number" required class="w-full px-4 py-2 bg-transparent border border-[#f9c922] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f9c922]">
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 bg-transparent border border-[#f9c922] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#f9c922]"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#f9c922] text-[#2e1b05] font-semibold py-2 px-4 hover:bg-yellow-400 transition duration-300">
+                            <i class="fas fa-calendar-alt mr-2"></i> Book Site Visit
+                        </button>
+                    </form>
+                </div>
+            </div>
+                <div class="flex items-center justify-center">
+                <div class="cta-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Could%20you%20share%20the%20Stamp%20Duty%2C%20On%20spot%20booking%20offers%20and%20payment%20plans%20for%20Godrej%20The%20Aqua%20Retreat." class="btn btn-primary">
+                        <i class="fas fa-download"></i>GET 10:90 PAYMENT PLAN
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Could%20you%20share%20the%20Stamp%20Duty%2C%20On%20spot%20booking%20offers%20and%20payment%20plans%20for%20Godrej%20The%20Aqua%20Retreat." class="btn btn-primary">
+                        <i class="fas fa-download"></i>BANK SUBVENTION SCHEMES
+                    </a>
+                    </div>
+                </div>
+          
+        </div>
+    </section>
+    
+    <section class="bg-[#f6f0dd] py-10 px-4" >
+        <div class="container">
+            <p>Disclaimer and Privacy Policy: The images displayed on the website are for representation purposes only and may not reflect the actual properties accurately. Please note that this is the official website of an authorized marketing partner. We may share data with Real Estate Regulatory Authority (RERA) registered brokers/companies for further processing as required. We may also send updates and information to the mobile number or email ID registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. Any unauthorized use or reproduction of the content may violate applicable laws. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is advisable to contact us directly through the provided contact information on this website.</p>
+            <div class="flex items-center justify-center">
+            <img src="/assets/images/qr.jpeg" alt="QR" class="rounded-md shadow-lg max-w-full" />
+        </div>
+        <br>
+            <p>MahaRERA Registration No.: P5210005497</p>
+        </div></section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919899199170" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you soon to schedule your site visit.');
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards
+        document.querySelectorAll('.feature-card, .info-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
