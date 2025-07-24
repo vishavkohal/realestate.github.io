@@ -550,18 +550,39 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar" class="bg-gradient-to-r from-[#3b260d] to-[#0B0C26] ">
-        <div class="nav-container">
-            <a href="#" class="logo text-3xl font-semibold text-yellow-500 border border-yellow-500 inline-block px-4 py-1 mb-8">Godrej Aqua Retreat</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+ <!-- Navigation -->
+<nav class="bg-gradient-to-r from-[#3b260d] to-[#0B0C26] px-4 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-2xl md:text-3xl font-semibold text-white border border-yellow-500 px-4 py-1">
+        Godrej Aqua Retreat
+      </a>
+  
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Navigation Links -->
+      <ul id="menu" class="hidden md:flex md:space-x-6 text-white text-lg mt-4 md:mt-0">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#features" class="hover:text-yellow-400">Features</a></li>
+        <li><a href="#location" class="hover:text-yellow-400">Location</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  
+    <!-- Mobile Menu (dropdown style) -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4 text-white text-lg">
+      <a href="#home" class="hover:text-yellow-400 block">Home</a>
+      <a href="#features" class="hover:text-yellow-400 block">Features</a>
+      <a href="#location" class="hover:text-yellow-400 block">Location</a>
+      <a href="#contact" class="hover:text-yellow-400 block">Contact</a>
+    </div>
+  </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -694,7 +715,7 @@
           <h3 class="text-lg font-bold">1 BED <span class="text-sm font-medium">(560 Sqft)</span></h3>
           <p class="text-yellow-600 font-semibold mt-2">STARTING<br>70 – 75 Lakhs*</p>
           <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%201%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20The%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
-            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+            GET COST SHEET <i class="fab fa-whatsapp inline w-4 h-4 ml-2" ></i>
           </a>
         </div>
   
@@ -704,7 +725,7 @@
           <h3 class="text-lg font-bold">2 BED <span class="text-sm font-medium">(860 - 900 Sqft)</span></h3>
           <p class="text-yellow-600 font-semibold mt-2">STARTING<br>1.09 Cr*</p>
           <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%202%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20the%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
-            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+            GET COST SHEET <i class="fab fa-whatsapp inline w-4 h-4 ml-2" ></i>
           </a>
         </div>
   
@@ -714,7 +735,7 @@
           <h3 class="text-lg font-bold">3 BED <span class="text-sm font-medium">(1060 - 1100 Sqft)</span></h3>
           <p class="text-yellow-600 font-semibold mt-2">STARTING<br>1.39 Cr*</p>
           <a href="https://api.whatsapp.com/send?phone=919699377628&text=Hello%2C%20Can%20you%20please%20send%20the%203%20Bed%20Cost%20Sheet%20and%20Brochure%20for%20Godrej%20The%20Aqua%20Retreat%3F%20I%20want%20to%20understand%20the%20pricing%20better." target="_blank" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 text-sm font-semibold rounded hover:bg-yellow-600 transition">
-            GET COST SHEET <img src="whatsapp-icon.png" alt="WhatsApp" class="inline w-4 h-4 ml-2">
+            GET COST SHEET <i class="fab fa-whatsapp inline w-4 h-4 ml-2" ></i>
           </a>
         </div>
   
@@ -1069,6 +1090,13 @@
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
         });
+
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
     </script>
 </body>
 </html>
